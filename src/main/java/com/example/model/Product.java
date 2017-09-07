@@ -14,7 +14,7 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "product_id")
-	private Long id;
+	private Long productId;
 
 	@Column(name = "name")
 	private String name;
@@ -30,12 +30,12 @@ public class Product {
 		this.price = price;
 	}
 
-	public Long getId() {
-		return id;
+	public Long getProductId() {
+		return productId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setProductId(Long productId) {
+		this.productId = productId;
 	}
 
 	public String getName() {
@@ -56,7 +56,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "id=" + id
+		return "id=" + productId
 			+ ", name = " + name
 			+ ", price = " + price;
 	}

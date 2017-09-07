@@ -1,10 +1,6 @@
 package com.example.service;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-
-import javax.annotation.PostConstruct;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,11 +30,8 @@ public class ProductGenerateService {
 	@Value("${stocks.productAmount}")
 	private Long productAmount;
 
-//	private List<String> names;
-	
-	@PostConstruct
+//	@PostConstruct
 	public void initialize() {
-//		names = new ArrayList<>();
 		generator = new Generex(regexp);
 		rnd = new Random();
 		

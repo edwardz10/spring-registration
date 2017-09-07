@@ -74,6 +74,14 @@ CREATE TABLE `product` (
   PRIMARY KEY (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `bet`;
+CREATE TABLE `bet` (
+  `bet_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `amount` int(4) NOT NULL,
+  `timestamp` timestamp NOT NULL,
+  PRIMARY KEY (`bet_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
