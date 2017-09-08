@@ -26,7 +26,7 @@ public class Bet {
     @JoinColumn(name = "product_id")
     private Product product;
 
-	@Column(name = "price")
+	@Column(name = "amount")
 	private Integer amount;
 
     @Column(name = "timestamp", nullable = false)

@@ -7,7 +7,6 @@ import javax.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -32,7 +31,6 @@ public class ProductService {
 
 	@PostConstruct
 	public void initialize() {
-//		pageCount = productRepository.count() / productsPerPage + 1;
 		LOG.info("Page count: " + pageCount);
 	}
 	
@@ -44,6 +42,7 @@ public class ProductService {
 
 	public Page<Product> getAllProductsPageable(Pageable pageable) {
 		Page<Product> products = productRepository.findAll(pageable);
+		
 		LOG.info("Products selected: " + products + ", pageable=" + pageable);
 		return products;
 	}
