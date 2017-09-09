@@ -10,3 +10,9 @@
 .pointer-disabled {
 	pointer-events: none;
 }
+
+.containerProducts, .containerBets {
+	display: inline-block;
+	margin-right: 50px;
+}
+
